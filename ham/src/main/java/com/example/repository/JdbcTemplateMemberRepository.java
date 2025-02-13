@@ -32,4 +32,13 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
     public List<Member> findAll() {
         return null;
     }
+
+    private RowMapper<Member> memberRowMapper() {
+        return (rs, rowNum) -> {
+            Member member = new Member();
+            member.setId(rs.getLong("id"));
+            member.setName(rs.getString("name"));
+            return member;
+        };
+    }
 }
