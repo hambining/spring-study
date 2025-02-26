@@ -28,7 +28,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
         Map<String, Object> parameters = new HashMap<>();
         parameters.put("name", member.getName());
 
-        Number key = jdbcInsert.executeAndReturnKey(new MapSqlParameterSource());
+        Number key = jdbcInsert.executeAndReturnKey(new MapSqlParameterSource(parameters));
         member.setId(key.longValue());
 
         return member;
@@ -42,7 +42,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
 
     @Override
     public Optional<Member> findByName(String name) {
-        List<Member> result = jdbcTemplate.query("select * from where name = ?", memberRowMapper(), name);
+        List<Member> result = jdbcTemplate.query("select * from member where name = ?", memberRowMapper(), name);
         return result.stream().findAny();
     }
 
