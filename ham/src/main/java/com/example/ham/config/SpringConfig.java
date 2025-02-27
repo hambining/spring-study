@@ -1,7 +1,7 @@
-package com.example.config;
+package com.example.ham.config;
 
-import com.example.repository.JdbcTemplateMemberRepository;
-import com.example.repository.MemberRepository;
+import com.example.ham.repository.JdbcTemplateMemberRepository;
+import com.example.ham.repository.MemberRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;

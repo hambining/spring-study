@@ -1,8 +1,8 @@
 package com.example.ham;
 
-import com.example.config.SpringConfig;
-import com.example.domain.Member;
-import com.example.repository.MemberRepository;
+import com.example.ham.config.SpringConfig;
+import com.example.ham.domain.Member;
+import com.example.ham.repository.MemberRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
