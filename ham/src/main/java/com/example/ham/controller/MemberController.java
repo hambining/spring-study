@@ -23,4 +23,11 @@ public class MemberController {
         return ResponseEntity.ok()
                 .body(members);
     }
+
+    @GetMapping("/{memberId}")
+    public ResponseEntity<Optional<Member>> getMemberResponseById(@PathVariable Long memberId) {
+        Optional<Member> findMember = memberService.findById(memberId);
+        return ResponseEntity.ok()
+                .body(findMember);
+    }
 }
