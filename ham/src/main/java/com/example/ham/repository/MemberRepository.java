@@ -1,6 +1,6 @@
-package com.example.repository;
+package com.example.ham.repository;
 
-import com.example.domain.Member;
+import com.example.ham.domain.Member;
 
 import java.util.List;
 import java.util.Optional;
