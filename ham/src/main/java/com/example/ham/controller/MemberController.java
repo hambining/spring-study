@@ -30,4 +30,14 @@ public class MemberController {
         return ResponseEntity.ok()
                 .body(findMember);
     }
+
+    @PostMapping("/{memberId}")
+    public ResponseEntity<Member> saveMember() {
+        Member member = new Member();
+        member.setId(1L);
+        member.setName("test");
+        memberService.save(member);
+        return ResponseEntity.ok()
+                .body(member);
+    }
 }
